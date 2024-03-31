@@ -1,5 +1,5 @@
 ## Notification Exploration
-This project is a dotnet 8 api, I am using to explore of building both a friend/block system. As well as a messaging system.
+This project is a dotnet 8 api, I am using to explore building both a friend/block system. As well as a messaging system.
 
 ## Setup
 This readme uses mermaidjs, you can install an addon in your ide to render the diagram.
