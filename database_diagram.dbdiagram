@@ -1,0 +1,30 @@
+// This file is used to generate the diagram
+// At https://dbdiagram.io/d
+
+Table User {
+  Id integer [primary key]
+  Username varchar
+}
+
+Table UserRelationship {
+  Id integer [primary key]
+  RequestingUserId integer
+  TargetUserId integer
+  RelationshipTypeId integer
+  RequestedAt timestamp
+  EndedAt timestamp
+}
+
+Table Message {
+  Id integer [primary key]
+  SenderId integer
+  RecipientId integer
+  Body varchar
+  SendAt timestamp
+}
+
+Ref: UserRelationship.RequestingUserId > User.Id
+Ref: UserRelationship.TargetUserId > User.Id
+
+Ref: Message.SenderId > User.Id
+Ref: Message.RecipientId > User.Id
